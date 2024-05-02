@@ -10,12 +10,14 @@ budget_management_router = APIRouter()
 
 @budget_management_router.get('')
 async def getBudget(userId):
+    """Routing that allows the user to access details about their expenses and revenues"""
     newBdget = await budget_management_CRUD.getBudget(userId)
     return {"userId": newBdget['userId'], "revenues": newBdget['revenues'], "expenses": newBdget['expenses']}
 
 
 @budget_management_router.post('')
 async def addBudget(budget: Budget):
+    """Routing that enables adding expenses and revenues for a specific user"""
     try:
         await budget_management_CRUD.addToBudget(budget)
     except Exception:
@@ -25,6 +27,7 @@ async def addBudget(budget: Budget):
 
 @budget_management_router.put('')
 async def updateBudget(budget: Budget):
+    """Routing that allows editing expenses and revenues for a specific user"""
     try:
         await budget_management_CRUD.updateBudget(budget)
     except Exception:
@@ -34,6 +37,7 @@ async def updateBudget(budget: Budget):
 
 @budget_management_router.delete('')
 async def deleteBudget(userId):
+    """Routing that enables deleting expenses and revenues for a specific user"""
     try:
         await budget_management_CRUD.deleteBudget(userId)
     except Exception:
