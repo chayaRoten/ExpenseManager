@@ -29,7 +29,7 @@ async def updateBudget(budget: Budget):
         await budget_management_CRUD.updateBudget(budget)
     except Exception:
         raise HTTPException(status_code=400, detail="oops... an error occurred in updateUser")
-    return "updateUser"
+    return "updateBudget"
 
 
 @budget_management_router.delete('')
