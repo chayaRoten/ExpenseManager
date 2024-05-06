@@ -2,7 +2,8 @@ from app.log import log
 from app.models.budget_management import Budget_Management as Budget
 from app.services.db import budget_management as management
 
-@log
+
+@log("logs.txt")
 async def getBudget(userId):
     """Receiving a report of expenses and revenues for a specific user"""
     try:
@@ -12,15 +13,16 @@ async def getBudget(userId):
         raise "error!!"
 
 
-@log
+@log("logs.txt")
 async def addToBudget(budget: Budget):
     """Adding expenses and revenues of a specific user to the management system"""
     myID = management.find_one({"userId": budget.userId})
-    if myID != None:
+    if myID == None:
         management.insert_one({"userId": budget.userId, "expenses": budget.expenses, "revenues": budget.revenues})
         return "addToBudget!"
     else:
         raise "id error!!!"
+
 
 
 async def updateBudget(budget: Budget):

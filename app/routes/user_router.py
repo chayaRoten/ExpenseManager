@@ -1,8 +1,5 @@
-from http.client import HTTPException
-
-from fastapi import APIRouter
+from fastapi import APIRouter , HTTPException
 from pydantic import ValidationError
-
 from app.services import user_CRUD
 from app.models.user import User
 

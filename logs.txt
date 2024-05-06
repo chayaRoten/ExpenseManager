@@ -1,0 +1,52 @@
+Calling function: getBudget
+Result: <coroutine object getBudget at 0x00000264F6567680>
+
+Calling function: getBudget
+Result: <coroutine object getBudget at 0x00000264F6566880>
+
+Calling function: getBudget
+Result: <coroutine object getBudget at 0x00000264F65C0040>
+
+Calling function: addToBudget
+Result: <coroutine object addToBudget at 0x0000022A83957D80>
+
+Calling function: addToBudget
+Result: <coroutine object addToBudget at 0x0000024F7DD47D80>
+
+Calling function: addToBudget
+Result: <coroutine object addToBudget at 0x00000157B5DC7D80>
+
+Calling function: addToBudget
+Result: <coroutine object addToBudget at 0x000001A9DE827D80>
+
+Calling function: addToBudget
+Result: <coroutine object addToBudget at 0x000001A9DE827E60>
+
+Calling function: addToBudget
+Result: <coroutine object addToBudget at 0x0000019044007D80>
+
+Calling function: addToBudget
+Result: <coroutine object addToBudget at 0x0000015A6E3D7D80>
+
+Calling function: addToBudget
+Result: <coroutine object addToBudget at 0x0000019606807D80>
+
+Calling function: addToBudget
+Result: <coroutine object addToBudget at 0x000001981A927CA0>
+
+Calling function: addToBudget
+Result: <coroutine object addToBudget at 0x000001F478E47D80>
+
+Calling function: addToBudget
+Result: <coroutine object addToBudget at 0x000002F6C3587D80>
+
+Calling function: addToBudget
+Result: <coroutine object addToBudget at 0x000002168BE87D80>
+
+Calling function: addToBudget
+Result: <coroutine object addToBudget at 0x0000017B807D7CA0>
+
+Function: addToBudget, Time: 2024-05-06 18:18:08, Success: True
+Function: addToBudget, Time: 2024-05-06 18:19:48, Success: False
+Function: addToBudget, Time: 2024-05-06 18:19:53, Success: False
+Function: addToBudget, Time: 2024-05-06 18:19:57, Success: False
