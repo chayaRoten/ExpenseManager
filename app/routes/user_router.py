@@ -10,19 +10,19 @@ user_router = APIRouter()
 async def login(user: User):
     """Routing that allows an existing user to log in to the system"""
     try:
-        myUser = user_CRUD.login(user)
+        myUser =await user_CRUD.login(user)
     except:
         raise HTTPException(status_code=400, detail="oops... an error occurred in login")
     return f"{myUser['name']} login"
 
 
-@user_router.post('/sighUp')
-async def sighUp(user: User):
+@user_router.post('/signUp')
+async def signUp(user: User):
     """Routing that allows a new user to register for the system"""
     try:
-        await user_CRUD.sighUp(user)
+        await user_CRUD.signUp(user)
     except:
-        raise HTTPException(status_code=400, detail="oops... an error occurred in sighUp")
+        raise HTTPException(status_code=400, detail="oops... an error occurred in signUp")
     return "sighUp!!"
 
 

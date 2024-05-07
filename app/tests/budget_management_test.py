@@ -1,21 +1,29 @@
-import pytest
+import asyncio
+from bson import ObjectId
 from app.services import budget_management_CRUD as budgetFunc
 from app.models.budget_management import Budget_Management as Budget
+import unittest
 
 
-def sss(x):
-    return x
+class TestHH(unittest.TestCase):
+    def test_getBudget(self):
+        result = asyncio.run(budgetFunc.getBudget(1))
+        assert result == {'_id': ObjectId('660d5c67adb1906e8645e5ad'), 'expenses': 500, 'revenues': 10000, 'userId': 1}
+
+    def test_addToBudget(self):
+        budget = Budget(userId=11111, expenses=700, revenues=600)
+        result = asyncio.run(budgetFunc.addToBudget(budget))
+        assert result == "addToBudget!"
+
+    def test_updateToBudget(self):
+        budget = Budget(userId=11111, expenses=70, revenues=60)
+        result = asyncio.run(budgetFunc.updateBudget(budget))
+        assert result == "updateBudget!"
+
+    def test_deleteBudget(self):
+        result = asyncio.run(budgetFunc.deleteBudget(11111))
+        assert result == "deleteBudget!"
 
 
-# @pytest.mark.skip(reason='Not implemented yet')
-# @pytest.mark.int
-def test_add():
-     # b.revenues = 700
-     # b.userId = 7410
-     # b.expenses = 78787
-     b = {"userId": 999, "expenses": 700, "revenues": 600}
-     assert budgetFunc.addToBudget(b) == "addToBudget"
-
-
-def test_hh():
-    assert sss(78) == 78
+if __name__ == '__main__':
+    unittest.main()

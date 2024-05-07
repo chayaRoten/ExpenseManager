@@ -41,6 +41,6 @@ async def deleteBudget(userId):
     """Deleting expenses and revenues for a specific user"""
     try:
         management.delete_one({"userId": int(userId)})
-        return "deleteBudget"
+        return "deleteBudget!"
     except:
         raise "error!!"

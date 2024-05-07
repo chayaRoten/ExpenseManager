@@ -2,7 +2,7 @@ from app.models.user import User
 from app.services.db import users
 
 
-def login(user: User):
+async def login(user: User):
     """The option for an existing user to log in to the system"""
     myUser = users.find_one({"name": user.name, "password": user.password})
     if myUser:
@@ -10,10 +10,10 @@ def login(user: User):
     return "error!"
 
 
-async def sighUp(user: User):
+async def signUp(user: User):
     """Adding a new user to the system"""
     users.insert_one({"name": user.name, "password": user.password, "id": user.id})
-    return "sigh up!"
+    return "sign up!"
 
 
 async def updateUser(user: User):
