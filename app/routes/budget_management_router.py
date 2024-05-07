@@ -10,8 +10,11 @@ budget_management_router = APIRouter()
 @budget_management_router.get('')
 async def getBudget(userId):
     """Routing that allows the user to access details about their expenses and revenues"""
-    newBudget = await budget_management_CRUD.getBudget(userId)
-    return {"userId": newBudget['userId'], "revenues": newBudget['revenues'], "expenses": newBudget['expenses']}
+    try:
+        newBudget = await budget_management_CRUD.getBudget(userId)
+        return {"userId": newBudget['userId'], "revenues": newBudget['revenues'], "expenses": newBudget['expenses']}
+    except Exception:
+        raise HTTPException(status_code=400, detail="oops... an error occurred in getBudget")
 
 
 @budget_management_router.post('')
