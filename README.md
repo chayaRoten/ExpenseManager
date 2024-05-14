@@ -32,17 +32,17 @@ Thank you for your dedication to this project. We look forward to creating somet
 
 ├── app\
 │   ├── models\
-│   |  ├── budget_management.py\
-│   |  └── user.py\
+│   │  ├── budget_management.py\
+│   │  └── user.py\
 │   ├── routes\
-│   |  ├── budget_management_router.py\
-│   |  ├── user_router.py\
-│   |  └── visualiztion_router.py\
+│   │  ├── budget_management_router.py\
+│   │  ├── user_router.py\
+│   │  └── visualiztion_router.py\
 │   └── services\
-│   |  ├── budget_management_CRUD.py\
-│   |  ├── db.py\
-│   |  ├── user_CRUD.py\
-│   |  └── visualiztion.py\
+│   │  ├── budget_management_CRUD.py\
+│   │  ├── db.py\
+│   │  ├── user_CRUD.py\
+│   │  └── visualiztion.py\
 ├── requirements.txt\
 ├── tests\
 │   ├── budget_management_test.py\
