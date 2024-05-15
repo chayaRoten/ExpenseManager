@@ -24,7 +24,7 @@ async def addToBudget(budget: Budget):
         raise "id error!!!"
 
 
-
+@log("logs.txt")
 async def updateBudget(budget: Budget):
     """Managing expenses and revenues for a specific user"""
     myID = management.find_one({"userId": budget.userId})
@@ -36,7 +36,7 @@ async def updateBudget(budget: Budget):
     else:
         raise "id error!!!"
 
-
+@log("logs.txt")
 async def deleteBudget(userId):
     """Deleting expenses and revenues for a specific user"""
     try:
