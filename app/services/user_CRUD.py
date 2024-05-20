@@ -17,16 +17,18 @@ async def login(user: User):
 
 
 @log("logs.txt")
-async def signUp(user: User):
+async def sign_up(user: User):
     """Adding a new user to the system"""
     users.insert_one({"name": user.name, "password": user.password, "id": user.id})
+    global user_id
+    user_id = user.id
     return "sign up!"
 
 
 @log("logs.txt")
-async def updateUser(user: User):
+async def update_user(user: User):
     """Editing the details for a specific user"""
-    filter = {'id': user.id}
-    newvalues = {"$set": {"name": user.name, "password": user.password}}
-    users.update_one(filter, newvalues)
+    my_filter = {'id': user.id}
+    new_values = {"$set": {"name": user.name, "password": user.password}}
+    users.update_one(my_filter, new_values)
     return "update user!"

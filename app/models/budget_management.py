@@ -1,6 +1,10 @@
+
 from pydantic import BaseModel
 
-class Budget_Management(BaseModel):
+
+class budget_Management(BaseModel):
+    id: int
+    date: str
     revenues: int
     expenses: int
     userId: int

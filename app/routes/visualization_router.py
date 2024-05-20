@@ -5,9 +5,8 @@ visualization_router = APIRouter()
 
 
 @visualization_router.post('/plot')
-# @visualization_router.post('/plot')
 async def visualization():
-    """"""
+    """Display data segmentation for the user regarding income and expenses"""
     try:
         await vl.plot()
     except:

@@ -20,3 +20,5 @@ Function: getBudget, Time: 2024-05-07 19:41:36, Success: True
 Function: addToBudget, Time: 2024-05-07 19:41:41, Success: True
 Function: addToBudget, Time: 2024-05-07 19:41:46, Success: True
 Function: getBudget, Time: 2024-05-07 19:41:46, Success: True
+Function: add_to_budget, Time: 2024-05-20 18:40:07
+Function: update_budget, Time: 2024-05-20 18:40:19

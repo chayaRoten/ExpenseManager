@@ -6,13 +6,11 @@ def log(log_file):
             current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             try:
                 result = func(*args, **kwargs)
-                success = True
             except Exception as e:
                 result = str(e)
-                success = False
 
             with open(log_file, 'a') as f:
-                f.write(f"Function: {func.__name__}, Time: {current_time}, Success: {success}\n")
+                f.write(f"Function: {func.__name__}, Time: {current_time}\n")
             return result
         return wrapper
     return decorator
