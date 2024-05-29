@@ -9,6 +9,6 @@ async def visualization():
     """Display data segmentation for the user regarding income and expenses"""
     try:
         await vl.plot()
-    except:
+    except Exception:
         raise HTTPException(status_code=400, detail="oops... an error occurred in visualization")
     return f"visualization"

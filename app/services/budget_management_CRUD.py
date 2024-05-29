@@ -16,7 +16,7 @@ async def get_budget():
         for document in management.find({"userId": int(user_id)}):
             budgets.append(document)
         return budgets
-    except:
+    except Exception:
         raise "error!!"
 
 
@@ -28,7 +28,7 @@ async def add_to_budget(budget: Budget):
             {"userId": user_CRUD.user_id, "expenses": budget.expenses, "revenues": budget.revenues,
              "id": budget.id, "date": budget.date})
         return "addToBudget!"
-    except:
+    except Exception:
         raise "user id error!!!"
 
 
@@ -42,7 +42,7 @@ async def update_budget(budget: Budget):
                      "date": budget.date}}
         management.update_one(my_filter, new_values)
         return "updateBudget!"
-    except:
+    except Exception:
         raise "id error!!!"
 
 
@@ -52,5 +52,5 @@ async def delete_budget(id):
     try:
         management.delete_one({"id": int(id)})
         return "deleteBudget!"
-    except:
+    except Exception:
         raise "error!!"
