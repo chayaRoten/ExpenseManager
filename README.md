@@ -38,17 +38,20 @@ Thank you for your dedication to this project. We look forward to creating somet
 │   │  ├── budget_management_router.py\
 │   │  ├── user_router.py\
 │   │  └── visualiztion_router.py\
-│   └── services\
+│   ├── services\
 │   │  ├── budget_management_CRUD.py\
 │   │  ├── db.py\
 │   │  ├── user_CRUD.py\
 │   │  └── visualiztion.py\
+│   ├── log.py\
+│   └── main.py\
 ├── requirements.txt\
 ├── tests\
 │   ├── budget_management_test.py\
 │   └── users_test.py\
-├── README.md\
-└── main.py\
+└──  README.md\
+
+
 
 
 ## Table of Contents
